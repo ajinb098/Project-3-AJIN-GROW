@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajin's Growth</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        h1 { font-size: 50px; margin-bottom: 10px; }
+        p { font-size: 20px; color: #aaa; }
+    </style>
+</head>
+<body>
+    <h1>AJIN IS GROWING DAY BY DAY</h1>
+    <p id="time-display">YOUR TIME: </p>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('time-display').innerText = "YOUR TIME: " + now.toLocaleTimeString();
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>
